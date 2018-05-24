@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Projekt parkietu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../style.css" />
+    <script src="../dropdown.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="../index.html">Strona główna</a>
+        <a href="../formularz/formularz.html">Zapisy na treningi z MJ</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="myFunction()">Parkiet
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content" id="myDropdown">
+                <a href="./parkiet.html">Projekt parkietu</a>
+                <a href="trumna.html">Trumna</a>
+                <a href="srodek.html">Koło środkowe</a>
+                <a href="3point.html">Linia rzutów za 3</a>
+
+            </div>
+        </div>
+        <a href="../kontakt/kontakt.html">Kontakt</a>
+        <a href="../prezentacja/prezentacja.html">Cytaty</a>
+
+    </div>
+    <img style="    display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;" src="court.png" alt="Court" usemap="#courtmap">
+
+    <map name="courtmap">
+        <area shape="rect" coords="41,342,346,620" alt="Trumna" href="trumna.html">
+        <area shape="rect" coords="1257,342,1562,620" alt="Trumna" href="trumna.html">
+        <area shape="rect" coords="456,54,564,896" alt="Linia rzutów za 3" href="3point.html">
+        <area shape="rect" coords="1040,54,1144,896" alt="Linia rzutów za 3" href="3point.html">
+
+        <area shape="circle" coords="800,480,107" alt="Środek" href="srodek.html">
+
+    </map>
+</body>
+
+</html>

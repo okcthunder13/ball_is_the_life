@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ball is life</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <link rel="Stylesheet" type="text/css" href="style.css" />
+  <script src="dropdown.js"></script>
+
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="index.html">Strona główna</a>
+    <a href="./formularz/formularz.html">Zapisy na treningi z MJ</a>
+    <div class="dropdown">
+      <button class="dropbtn" onclick="myFunction()">Parkiet
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content" id="myDropdown">
+        <a href="./parkiet/parkiet.html">Projekt parkietu</a>
+        <a href="./parkiet/trumna.html">Trumna</a>
+        <a href="./parkiet/srodek.html">Koło środkowe</a>
+        <a href="./parkiet/3pt.jpg">Linia rzutów za 3</a>
+      </div>
+    </div>
+    <a href="./kontakt/kontakt.html">Kontakt</a>
+    <a href="./prezentacja/prezentacja.html">Cytaty</a>
+    <b><p id="date" align = "right" style="color:#FF0000;"></p></b>
+  </div>
+  
+  <div class="bgimg-1"> 
+  </div>
+  </div>
+
+  <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <h3 style="text-align:center;">The GOAT</h3>
+    <p>Michael Jeffrey Jordan (born February 17, 1963) is a professional American basketball player, Olympic athlete, businessperson
+      and actor. Considered one of the best basketball players ever, Michael Jordan dominated the sport from the mid-1980s
+      to the late 1990s. He led the Chicago Bulls to six National Basketball Association championships and earned the NBA's
+      Most Valuable Player Award five times. With five regular-season MVPs and three All-Star MVPs, Jordan became the most
+      decorated player in the NBA.
+    </p>
+  </div>
+
+  <div class="bgimg-2">
+    <div class="caption">
+      <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">FLY HIGH</span>
+    </div>
+  </div>
+  <div style="position:relative;">
+    <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
+      <p>„I can accept failure, everyone fails at something. But I can't accept not trying” - Michael Jordan</p>
+    </div>
+  </div>
+
+  <div class="bgimg-1">
+  </div>
+  </div>
+  <script>
+    function formatDate(date) {
+  var monthNames = [
+    "January", "February", "March",
+    "April", "May", "June", "July",
+    "August", "September", "October",
+    "November", "December"
+  ];
+
+  var day = date.getDate();
+  var monthIndex = date.getMonth();
+  var year = date.getFullYear();
+
+  return day + ' ' + monthNames[monthIndex] + ' ' + year;
+}
+    document.getElementById("date").innerHTML = formatDate(new Date());
+  </script>
+
+  <script>
+    expireDate = new Date
+    expireDate.setMonth(expireDate.getMonth() + 6)
+    jcount = eval(cookieVal("jaafarCounter"))
+    jcount++
+    document.cookie = "jaafarCounter=" + jcount + ";expires=" + expireDate.toGMTString()
+
+    function cookieVal(cookieName) {
+      thisCookie = document.cookie.split("; ")
+      for (i = 0; i < thisCookie.length; i++) {
+        if (cookieName == thisCookie[i].split("=")[0]) {
+          return thisCookie[i].split("=")[1]
+        }
+      }
+      return 0
+    }
+
+    function page_counter() {
+      for (i = 0; i < (7 - jcount.toString().length); i++)
+        document.write('<span class="counter">0</span>')
+      for (y = 0; y < (jcount.toString().length); y++)
+        document.write('<span class="counter">' + jcount.toString().charAt(y) + '</span>')
+    }
+  </script>
+  <p class="counter">Licznik odwiedzin
+    <script>
+      page_counter(jcount);
+    </script>
+  </p>
+</body>
+
+</html>
